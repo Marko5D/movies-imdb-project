@@ -9,4 +9,4 @@ for i in range(df.shape[0]):
 
         df.loc[i, 'rental_date'] = pd.to_datetime(value, format='%d.%m.%Y', errors='raise')
 
-        print(i, type(value).__name__, value)
+        print(df.dtypes)
