@@ -1,3 +1,5 @@
 import pandas as pd
 
-pd.read_csv('books.csv')
+df = pd.read_csv('books.csv')
+
+print(df.loc[3, 'title'])
