@@ -1,6 +1,6 @@
 import pandas as pd
 
-df = pd.read_excel('users_rentals_v2.xlsx')
+df = pd.read_excel('users_rentals_v2.xlsx', engine='openpyxl')
 
 for i in range(df.shape[0]):
     value = df.loc[i, 'rental_date']
@@ -11,11 +11,8 @@ for i in range(df.shape[0]):
 
 df['rental_date'] = pd.to_datetime(df['rental_date'], errors='raise')
 
-print(df.dtypes)
 
-today = pd.Timestamp.today()
-interval = today - df.loc[1, 'rental_date']
+mask = (pd.Timestamp.today() - df['rental_date']) > pd.Timedelta(days=31)
 
-print(interval > pd.Timedelta(days=31))
 
       
