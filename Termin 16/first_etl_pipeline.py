@@ -16,4 +16,6 @@ print(df.dtypes)
 today = pd.Timestamp.today()
 interval = today - df.loc[1, 'rental_date']
 
-print(interval.days > 31)
+print(interval > pd.Timedelta(days=31))
+
+      
