@@ -1,5 +1,5 @@
 import pandas as pd
 
-df = pd.read_csv('books.csv', index_col='id')
+df = pd.read_excel('users_rentals.xlsx')
 
-print(df.loc[103, 'title'])
+print(df)

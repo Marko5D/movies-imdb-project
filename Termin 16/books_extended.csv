@@ -1,0 +1,507 @@
+id,title,author,published,genre
+1,To Kill a Mockingbird,Harper Lee,1960,Fiction
+2,1984,George Orwell,1949,Dystopian
+3,Moby Dick,Herman Melville,1851,Adventure
+4,War and Peace,Leo Tolstoy,1869,Historical
+5,The Catcher in the Rye,J.D. Salinger,1951,Coming-of-Age
+6,The Alchemist,Paulo Coelho,1988,Adventure
+7,Pride and Prejudice,Jane Austen,1813,Romance
+8,The Great Gatsby,F. Scott Fitzgerald,1925,Fiction
+9,Brave New World,Aldous Huxley,1932,Dystopian
+10,The Odyssey,Homer,-800,Epic
+11,The Picture of Dorian Gray,Oscar Wilde,1890,Philosophical
+12,Crime and Punishment,Fyodor Dostoevsky,1866,Philosophical
+13,The Brothers Karamazov,Fyodor Dostoevsky,1880,Philosophical
+14,The Hobbit,J.R.R. Tolkien,1937,Fantasy
+15,Fahrenheit 451,Ray Bradbury,1953,Dystopian
+16,Catch-22,Joseph Heller,1961,Satire
+17,The Grapes of Wrath,John Steinbeck,1939,Fiction
+18,The Road,Cormac McCarthy,2006,Post-Apocalyptic
+19,Jane Eyre,Charlotte Brontë,1847,Romance
+20,Wuthering Heights,Emily Brontë,1847,Gothic
+21,Little Women,Louisa May Alcott,1868,Coming-of-Age
+22,The Chronicles of Narnia,C.S. Lewis,1950,Fantasy
+23,The Secret Garden,Frances Hodgson Burnett,1911,Children's
+24,The Call of the Wild,Jack London,1903,Adventure
+25,The Scarlet Letter,Nathaniel Hawthorne,1850,Historical Fiction
+26,Anna Karenina,Leo Tolstoy,1877,Romance
+27,The Handmaid's Tale,Margaret Atwood,1985,Dystopian
+28,The Kite Runner,Khaled Hosseini,2003,Fiction
+29,The Fault in Our Stars,John Green,2012,Young Adult
+30,A Tale of Two Cities,Charles Dickens,1859,Historical Fiction
+31,The Count of Monte Cristo,Alexandre Dumas,1844,Adventure
+32,The Da Vinci Code,Dan Brown,2003,Thriller
+33,Siddhartha,Hermann Hesse,1922,Philosophical
+34,The Sun Also Rises,Ernest Hemingway,1926,Fiction
+35,Slaughterhouse-Five,Kurt Vonnegut,1969,Sci-Fi
+36,The Old Man and the Sea,Ernest Hemingway,1952,Fiction
+37,A Clockwork Orange,Anthony Burgess,1962,Dystopian
+38,The Hitchhiker's Guide to the Galaxy,Douglas Adams,1979,Sci-Fi
+39,The Bell Jar,Sylvia Plath,1963,Fiction
+40,To the Lighthouse,Virginia Woolf,1927,Fiction
+41,Life of Pi,Yann Martel,2001,Fiction
+42,The Amazing Adventures of Kavalier & Clay,Michael Chabon,2000,Fiction
+43,The Night Circus,Erin Morgenstern,2011,Fantasy
+44,Where the Crawdads Sing,Delia Owens,2018,Fiction
+45,The Martian,Andy Weir,2011,Sci-Fi
+46,The Book Thief,Markus Zusak,2005,Fiction
+47,Educated,Tara Westover,2018,Memoir
+48,The Immortal Life of Henrietta Lacks,Rebecca Skloot,2010,Non-Fiction
+49,The Glass Castle,Jeannette Walls,2005,Memoir
+50,Becoming,Michelle Obama,2018,Memoir
+51,"Thinking,Fast and Slow",Daniel Kahneman,2011,Non-Fiction
+52,Sapiens: A Brief History of Humankind,Yuval Noah Harari,2011,Non-Fiction
+53,The Power of Habit: Why We Do What We Do in Life and Business,Charles Duhigg,2012,Non-Fiction
+54,The Subtle Art of Not Giving a F*ck,Mark Manson,2016,Non-Fiction
+55,Quiet: The Power of Introverts in a World That Can't Stop Talking,Susan Cain,2012,Non-Fiction
+56,Grit: The Power of Passion and Perseverance,Angela Duckworth,2016,Non-Fiction
+57,The 7 Habits of Highly Effective People,Stephen R. Covey,1989,Self-Help
+58,How to Win Friends and Influence People,Dale Carnegie,1936,Self-Help
+59,The Four Agreements,Don Miguel Ruiz,1997,Self-Help
+60,Man's Search for Meaning,Viktor E. Frankl,1946,Psychology
+61,Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones,James Clear,2018,Self-Help
+62,Dare to Lead,Brene Brown,2018,Self-Help
+63,Rich Dad Poor Dad: What the Rich Teach Their Kids About Money That the Poor and the Middle Class Do Not,Robert T. Kiyosaki,1997,Personal Finance
+64,The Total Money Makeover: A Proven Plan for Financial Fitness,Dave Ramsey,2003,Personal Finance
+65,You Are a Badass: How to Stop Doubting Your Greatness and Start Living an Awesome Life,Jen Sincero,2013,Self-Help
+66,Awaken the Giant Within,Tony Robbins,1991,Self-Help
+67,The 48 Laws of Power,Robert Greene,1998,Self-Help
+68,The Prince,Niccolò Machiavelli,1532,Politics
+69,The Elements of Style,William Strunk Jr. and E.B. White,1959,Writing
+70,On Writing: A Memoir of the Craft,Stephen King,2000,Writing
+71,The War of Art,Steven Pressfield,2002,Writing
+72,The Writing Life,Annie Dillard,1989,Writing
+73,The Artist's Way: A Spiritual Path to Higher Creativity,Julia Cameron,1992,Creativity
+74,Big Magic: Creative Living Beyond Fear,Elizabeth Gilbert,2015,Creativity
+75,Steal Like an Artist: 10 Things Nobody Told You About Being Creative,Austin Kleon,2012,Creativity
+76,The Creative Habit: Learn It and Use It for Life,Twyla Tharp,2003,Creativity
+77,The Creative's Guide to Starting a Business,Danny Iny,2014,Entrepreneurship
+78,The Lean Startup: How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses,Eric Ries,2011,Entrepreneurship
+79,"Crushing It!: How Great Entrepreneurs Build Their Business and Influence—and How You Can, Too",Gary Vaynerchuk,2018,Entrepreneurship
+80,"Zero to One: Notes on Startups, or How to Build the Future",Peter Thiel,2014,Entrepreneurship
+81,The Hard Thing About Hard Things: Building a Business When There Are No Easy Answers,Ben Horowitz,2014,Entrepreneurship
+82,Start with Why: How Great Leaders Inspire Everyone to Take Action,Simon Sinek,2009,Leadership
+83,Good to Great: Why Some Companies Make the Leap... and Others Don't,Jim Collins,2001,Management
+84,The Five Dysfunctions of a Team: A Leadership Fable,Patrick Lencioni,2002,Management
+85,The Innovator's Dilemma: When New Technologies Cause Great Firms to Fail,Clayton Christensen,1997,Management
+86,The Advantage: Why Organizational Health Trumps Everything Else in Business,Patrick Lencioni,2012,Management
+87,Drive: The Surprising Truth About What Motivates Us,Daniel H. Pink,2009,Management
+88,Leaders Eat Last: Why Some Teams Pull Together and Others Don't,Simon Sinek,2014,Leadership
+89,The Art of Happiness,Dalai Lama,1998,Philosophy
+90,"Thinking, Fast and Slow",Daniel Kahneman,2011,Psychology
+91,The God Delusion,Richard Dawkins,2006,Non-Fiction
+92,The Selfish Gene,Richard Dawkins,1976,Non-Fiction
+93,The Blind Watchmaker,Richard Dawkins,1986,Non-Fiction
+94,A Brief History of Time,Stephen Hawking,1988,Science
+95,The Universe in a Nutshell,Stephen Hawking,2001,Science
+96,The Grand Design,Stephen Hawking,2010,Science
+97,"The Fabric of the Cosmos: Space, Time, and the Texture of Reality",Brian Greene,2004,Science
+98,The Hidden Reality: Parallel Universes and the Deep Laws of the Cosmos,Brian Greene,2011,Science
+99,"The Elegant Universe: Superstrings, Hidden Dimensions, and the Quest for the Ultimate Theory",Brian Greene,1999,Science
+100,The Gene: An Intimate History,Siddhartha Mukherjee,2016,Non-Fiction
+101,The Emperor of All Maladies: A Biography of Cancer,Siddhartha Mukherjee,2010,Non-Fiction
+102,When Breath Becomes Air,Paul Kalanithi,2016,Memoir
+103,Being Mortal: Medicine and What Matters in the End,Atul Gawande,2014,Non-Fiction
+104,Outliers: The Story of Success,Malcolm Gladwell,2008,Non-Fiction
+105,Blink: The Power of Thinking Without Thinking,Malcolm Gladwell,2005,Non-Fiction
+106,"David and Goliath: Underdogs, Misfits, and the Art of Battling Giants",Malcolm Gladwell,2013,Non-Fiction
+107,The Tipping Point: How Little Things Can Make a Big Difference,Malcolm Gladwell,2000,Non-Fiction
+108,The Art of War,Sun Tzu,5th Century BC,Military
+109,Think and Grow Rich,Napoleon Hill,1937,Self-Help
+110,Atomic Habits,James Clear,2018,Self-Help
+111,The Road Less Traveled,M. Scott Peck,1978,Self-Help
+112,The Man Who Knew Infinity,Robert Kanigel,1991,Biography
+113,Silent Spring,Rachel Carson,1962,Environmental
+114,"Guns, Germs, and Steel",Jared Diamond,1997,History
+115,Collapse: How Societies Choose to Fail or Succeed,Jared Diamond,2005,History
+116,The Structure of Scientific Revolutions,Thomas S. Kuhn,1962,Science
+117,The Origin of Species,Charles Darwin,1859,Science
+118,The Double Helix,James D. Watson,1968,Science
+119,The Emperor's New Mind,Roger Penrose,1989,Science
+120,Quantum Mechanics: The Theoretical Minimum,Leonard Susskind,2013,Science
+121,The Order of Time,Carlo Rovelli,2017,Science
+122,The Fabric of the Cosmos,Brian Greene,2004,Science
+123,Seven Brief Lessons on Physics,Carlo Rovelli,2014,Science
+124,Chaos: Making a New Science,James Gleick,1987,Science
+125,Physics of the Impossible,Michio Kaku,2008,Science
+126,"The Innovators: How a Group of Hackers, Geniuses, and Geeks Created the Digital Revolution",Walter Isaacson,2014,Technology
+127,Steve Jobs,Walter Isaacson,2011,Biography
+128,"Elon Musk: Tesla, SpaceX, and the Quest for a Fantastic Future",Ashlee Vance,2015,Biography
+129,Einstein: His Life and Universe,Walter Isaacson,2007,Biography
+130,"Unbroken: A World War II Story of Survival, Resilience, and Redemption",Laura Hillenbrand,2010,Non-Fiction
+131,The Wright Brothers,David McCullough,2015,Biography
+132,Alexander Hamilton,Ron Chernow,2004,Biography
+133,Grant,Ron Chernow,2017,Biography
+134,Team of Rivals: The Political Genius of Abraham Lincoln,Doris Kearns Goodwin,2005,History
+135,1776,David McCullough,2005,History
+136,John Adams,David McCullough,2001,Biography
+137,The Rise and Fall of the Third Reich,William L. Shirer,1960,History
+138,Bury My Heart at Wounded Knee,Dee Brown,1970,History
+139,Genghis Khan and the Making of the Modern World,Jack Weatherford,2004,History
+140,The Pioneers,David McCullough,2019,History
+141,The Sixth Extinction: An Unnatural History,Elizabeth Kolbert,2014,Science
+142,A Short History of Nearly Everything,Bill Bryson,2003,Science
+143,Cosmos,Carl Sagan,1980,Science
+144,Pale Blue Dot: A Vision of the Human Future in Space,Carl Sagan,1994,Science
+145,"The God Particle: If the Universe Is the Answer, What Is the Question?",Leon Lederman,1993,Science
+146,The Demon-Haunted World: Science as a Candle in the Dark,Carl Sagan,1995,Science
+147,The Greatest Show on Earth: The Evidence for Evolution,Richard Dawkins,2009,Science
+148,The Social Contract,Jean-Jacques Rousseau,1762,Philosophy
+149,On Liberty,John Stuart Mill,1859,Philosophy
+150,The Wealth of Nations,Adam Smith,1776,Economics
+151,Das Kapital,Karl Marx,1867,Economics
+152,The Communist Manifesto,Karl Marx and Friedrich Engels,1848,Politics
+153,Animal Farm,George Orwell,1945,Dystopian
+154,Oryx and Crake,Margaret Atwood,2003,Dystopian
+155,The Hunger Games,Suzanne Collins,2008,Dystopian
+156,Mockingjay,Suzanne Collins,2010,Dystopian
+157,The Maze Runner,James Dashner,2009,Dystopian
+158,Divergent,Veronica Roth,2011,Dystopian
+159,The Giver,Lois Lowry,1993,Dystopian
+160,The Little Prince,Antoine de Saint-Exupéry,1943,Fiction
+161,The Phantom Tollbooth,Norton Juster,1961,Fantasy
+162,Where the Wild Things Are,Maurice Sendak,1963,Children's
+163,Charlotte's Web,E.B. White,1952,Children's
+164,Harry Potter and the Sorcerer's Stone,J.K. Rowling,1997,Fantasy
+165,Harry Potter and the Chamber of Secrets,J.K. Rowling,1998,Fantasy
+166,Harry Potter and the Prisoner of Azkaban,J.K. Rowling,1999,Fantasy
+167,The Fellowship of the Ring,J.R.R. Tolkien,1954,Fantasy
+168,The Two Towers,J.R.R. Tolkien,1954,Fantasy
+169,The Return of the King,J.R.R. Tolkien,1955,Fantasy
+170,Emma,Jane Austen,1815,Romance
+171,Dracula,Bram Stoker,1897,Horror
+172,Frankenstein,Mary Shelley,1818,Horror
+173,The Metamorphosis,Franz Kafka,1915,Fiction
+174,The Idiot,Fyodor Dostoevsky,1869,Philosophy
+175,Les Misérables,Victor Hugo,1862,Historical
+176,The Iliad,Homer,8th Century BC,Classics
+177,The Aeneid,Virgil,1st Century BC,Classics
+178,Inferno,Dante Alighieri,1320,Classics
+179,Paradise Lost,John Milton,1667,Classics
+180,Don Quixote,Miguel de Cervantes,1605,Classics
+181,One Hundred Years of Solitude,Gabriel Garcia Marquez,1967,Magical Realism
+182,Love in the Time of Cholera,Gabriel Garcia Marquez,1985,Romance
+183,The House of the Spirits,Isabel Allende,1982,Magical Realism
+184,The Unbearable Lightness of Being,Milan Kundera,1984,Fiction
+185,Shantaram,Gregory David Roberts,2003,Fiction
+186,A Thousand Splendid Suns,Khaled Hosseini,2007,Fiction
+187,And the Mountains Echoed,Khaled Hosseini,2013,Fiction
+188,The Girl with the Dragon Tattoo,Stieg Larsson,2005,Mystery
+189,Gone Girl,Gillian Flynn,2012,Mystery
+190,Angels & Demons,Dan Brown,2000,Mystery
+191,The Lovely Bones,Alice Sebold,2002,Fiction
+192,The Girl on the Train,Paula Hawkins,2015,Thriller
+193,Big Little Lies,Liane Moriarty,2014,Thriller
+194,Sharp Objects,Gillian Flynn,2006,Thriller
+195,In Cold Blood,Truman Capote,1966,True Crime
+196,Helter Skelter,Vincent Bugliosi,1974,True Crime
+197,I Know Why the Caged Bird Sings,Maya Angelou,1969,Memoir
+198,East of Eden,John Steinbeck,1952,Fiction
+199,Of Mice and Men,John Steinbeck,1937,Fiction
+200,The Right Stuff,Tom Wolfe,1979,Space Exploration
+201,An Astronaut's Guide to Life on Earth,Chris Hadfield,2013,Space Exploration
+202,Apollo 13,Jeffrey Kluger & James Lovell,1994,Space Exploration
+203,"Endurance: A Year in Space, A Lifetime of Discovery",Scott Kelly,2017,Space Exploration
+204,Failure Is Not an Option,Gene Kranz,2000,Space Exploration
+205,Rocket Men,Robert Kurson,2018,Space Exploration
+206,Hidden Figures,Margot Lee Shetterly,2016,Space Exploration
+207,The Overview Effect,Frank White,1987,Space Exploration
+208,The Case for Mars,Robert Zubrin,1996,Space Exploration
+209,The Right Kind of Crazy,Adam Steltzner,2016,Space Exploration
+210,Wanderers,Robinson Wells,2021,Space Exploration
+211,The Last Man on the Moon,Eugene Cernan,1999,Space Exploration
+212,Riding Rockets,Mike Mullane,2006,Space Exploration
+213,Lost Moon,Jeffrey Kluger & James Lovell,1994,Space Exploration
+214,Moon Shot,Alan Shepard & Deke Slayton,1994,Space Exploration
+215,Packing for Mars,Mary Roach,2010,Space Exploration
+216,A Man on the Moon,Andrew Chaikin,1994,Space Exploration
+217,Chasing Space,Leland Melvin,2017,Space Exploration
+218,Rocket Boys,Homer Hickam,1998,Space Exploration
+219,Beyond Earth,Charles Wohlforth & Amanda Hendrix,2016,Space Exploration
+220,The Sky Below,Scott Parazynski,2017,Space Exploration
+221,Astrophysics for People in a Hurry,Neil de Grasse Tyson,2017,Space Exploration
+222,Moonwalk,Michael Jackson,1988,Space Exploration
+223,The Apollo Murders,Chris Hadfield,2021,Space Exploration
+224,Space Chronicles,Neil de Grasse Tyson,2012,Space Exploration
+225,The Orbital Perspective,Ron Garan,2015,Space Exploration
+226,The Moon Is a Harsh Mistress,Robert A. Heinlein,1966,Space Exploration
+227,The Future of Humanity,Michio Kaku,2018,Space Exploration
+228,How We Got to the Moon,John Rocco,2020,Space Exploration
+229,Mission to Mars,Buzz Aldrin,2013,Space Exploration
+230,Apollo 8,Jeffrey Kluger,2017,Space Exploration
+231,First Man,James R. Hansen,2005,Space Exploration
+232,Infinite Worlds,Michael Carroll,2015,Space Exploration
+233,Spaceman,Mike Massimino,2016,Space Exploration
+234,Mars Direct,Robert Zubrin,2013,Space Exploration
+235,The Infinite View,Ellen Mahoney,2015,Space Exploration
+236,The New Right Stuff,Loretta Hidalgo Whitesides,2020,Space Exploration
+237,Apollo to the Moon,Teasel Muir-Harmony,2018,Space Exploration
+238,Mission Control,David Carey,2006,Space Exploration
+239,Into That Silent Sea,Francis French,2007,Space Exploration
+240,Rocket Science for Babies,Chris Ferrie,2013,Space Exploration
+241,The Interstellar Age,Jim Bell,2015,Space Exploration
+242,Our Cosmic Origins,Armand Delsemme,1998,Space Exploration
+243,The Race,James Schefter,1999,Space Exploration
+244,Apollo 11,David Whitehouse,2019,Space Exploration
+245,Countdown,Alan Weisman,2014,Space Exploration
+246,Rise of the Rocket Girls,Nathalia Holt,2016,Space Exploration
+247,Moonbound,Jonathan Fetter-Vorm,2019,Space Exploration
+248,The Shining,Stephen King,1977,Horror
+249,Pet Sematary,Stephen King,1983,Horror
+250,Bird Box,Josh Malerman,2014,Horror
+251,The Haunting of Hill House,Shirley Jackson,1959,Horror
+252,World War Z,Max Brooks,2006,Horror
+253,It,Stephen King,1986,Horror
+254,The Exorcist,William Peter Blatty,1971,Horror
+255,House of Leaves,Mark Z. Danielewski,2000,Horror
+256,The Silence of the Lambs,Thomas Harris,1988,Horror
+257,The Amityville Horror,Jay Anson,1977,Horror
+258,The Girl Next Door,Jack Ketchum,1989,Horror
+259,Carrie,Stephen King,1974,Horror
+260,Hell House,Richard Matheson,1971,Horror
+261,I Am Legend,Richard Matheson,1954,Horror
+262,The Ritual,Adam Nevill,2011,Horror
+263,Coraline,Neil Gaiman,2002,Horror
+264,Let the Right One In,John Ajvide Lindqvist,2004,Horror
+265,The Troop,Nick Cutter,2014,Horror
+266,The Hunger,Alma Katsu,2018,Horror
+267,The Cabin at the End of the World,Paul Tremblay,2018,Horror
+268,The Only Good Indians,Stephen Graham Jones,2020,Horror
+269,Ghost Story,Peter Straub,1979,Horror
+270,American Psycho,Bret Easton Ellis,1991,Horror
+271,The Ruins,Scott Smith,2006,Horror
+272,My Best Friend's Exorcism,Grady Hendrix,2016,Horror
+273,The Fisherman,John Langan,2016,Horror
+274,NOS4A2,Joe Hill,2013,Horror
+275,The Witching Hour,Anne Rice,1990,Horror
+276,Slade House,David Mitchell,2015,Horror
+277,The Outsider,Stephen King,2018,Horror
+278,Hex,Thomas Olde Heuvelt,2013,Horror
+279,The Long Walk,Stephen King,1979,Horror
+280,We Have Always Lived in the Castle,Shirley Jackson,1962,Horror
+281,The Deep,Nick Cutter,2015,Horror
+282,The Southern Book Club's Guide to Slaying Vampires,Grady Hendrix,2020,Horror
+283,The Forgotten Island,David Sodergren,2018,Horror
+284,Mexican Gothic,Silvia Moreno-Garcia,2020,Horror
+285,The Ballad of Black Tom,Victor LaValle,2016,Horror
+286,The Devil All the Time,Donald Ray Pollock,2011,Horror
+287,Carrion Comfort,Dan Simmons,1989,Horror
+288,Ring,Koji Suzuki,1991,Horror
+289,The Grip of It,Jac Jemc,2017,Horror
+290,Swan Song,Robert R. McCammon,1987,Horror
+291,The Good House,Tananarive Due,2003,Horror
+292,The Red Tree,Caitlín R. Kiernan,2009,Horror
+293,The Stand,Stephen King,1978,Horror
+294,Revival,Stephen King,2014,Horror
+295,The Power of Now,Eckhart Tolle,1997,Wellness
+296,How Not to Die,Michael Greger,2015,Health
+297,The Blue Zones,Dan Buettner,2008,Wellness
+298,Ikigai: The Japanese Secret to a Long Life,"Héctor García, Francesc Miralles",2016,Wellness
+299,The Miracle Morning,Hal Elrod,2012,Self-help
+300,The Longevity Diet,Valter Longo,2018,Health
+301,The Plant Paradox,Steven R. Gundry,2017,Nutrition
+302,Eat to Live,Joel Fuhrman,2003,Health
+303,The Whole30,"Melissa Hartwig Urban, Dallas Hartwig",2015,Nutrition
+304,Wheat Belly,William Davis,2011,Health
+305,Mind Over Medicine,Lissa Rankin,2013,Health
+306,SuperLife,Darin Olien,2015,Wellness
+307,Clean,Alejandro Junger,2009,Health
+308,The Paleo Solution,Robb Wolf,2010,Nutrition
+309,The Mind-Gut Connection,Emeran Mayer,2016,Health
+310,The China Study,T. Colin Campbell,2005,Nutrition
+311,You Are the Placebo,Joe Dispenza,2014,Self-help
+312,The Body Keeps the Score,Bessel van der Kolk,2014,Health
+313,Food Rules,Michael Pollan,2009,Nutrition
+314,The Obesity Code,Jason Fung,2016,Health
+315,Lifespan,David A. Sinclair,2019,Health
+316,The 5 AM Club,Robin Sharma,2018,Self-help
+317,Anti-Diet,Christy Harrison,2019,Nutrition
+318,The Sleep Revolution,Arianna Huffington,2016,Wellness
+319,Fast This Way,Dave Asprey,2021,Nutrition
+320,The Complete Guide to Fasting,Jason Fung,2016,Health
+321,Clean Gut,Alejandro Junger,2013,Health
+322,Spark,John J. Ratey,2008,Wellness
+323,Genius Foods,Max Lugavere,2018,Nutrition
+324,The Power of Habit,Charles Duhigg,2012,Self-help
+325,The End of Alzheimer's,Dale E. Bredesen,2017,Health
+326,The Telomere Effect,"Elizabeth Blackburn, Elissa Epel",2017,Health
+327,The Mindful Way Workbook,John D. Teasdale,2014,Wellness
+328,Why We Sleep,Matthew Walker,2017,Health
+329,Healing with Whole Foods,Paul Pitchford,1993,Nutrition
+330,The Wild Diet,Abel James,2015,Nutrition
+331,The Keto Reset Diet,Mark Sisson,2017,Nutrition
+332,"Eat, Move, Sleep",Tom Rath,2013,Wellness
+333,The Self-Care Solution,Jennifer Ashton,2019,Wellness
+334,Mindset,Carol S. Dweck,2006,Self-help
+335,The Little Book of Hygge,Meik Wiking,2016,Wellness
+336,The Happiness Project,Gretchen Rubin,2009,Self-help
+337,How to Be Well,Frank Lipman,2018,Health
+338,Becoming Supernatural,Joe Dispenza,2017,Self-help
+339,The Whole-Brain Child,Daniel J. Siegel,2011,Wellness
+340,Radical Acceptance,Tara Brach,2003,Self-help
+341,The Warrior Diet,Ori Hofmekler,2001,Nutrition
+342,Green for Life,Victoria Boutenko,2005,Nutrition
+343,The Longevity Solution,"Jason Fung, James DiNicolantonio",2019,Health
+344,The Art of Driving,John Doe,2002,Automobilism
+345,Race to the Finish,Jane Smith,2010,Automobilism
+346,Legends of Le Mans,Tom Hardy,2015,Automobilism
+347,Formula One Heroes,Emily Clarke,2008,Automobilism
+348,Classic Car Restoration,Robert Brown,1999,Automobilism
+350,Muscle Cars Unleashed,Michael Johnson,2005,Automobilism
+351,History of Automotive Engineering,Susan Green,2018,Automobilism
+352,The Car Culture Revolution,Mark Davis,2011,Automobilism
+353,Driving Through Time,Rebecca Adams,2000,Automobilism
+354,Supercars of the World,William Harris,2009,Automobilism
+355,American Muscle Legends,David Wilson,2014,Automobilism
+356,Automotive Innovations,James Evans,2020,Automobilism
+357,Rally Racing History,Christine Cooper,2001,Automobilism
+358,The Evolution of Cars,Charles Young,2006,Automobilism
+359,Road Trip Stories,Patricia Baker,2017,Automobilism
+360,Sportscars: The Ultimate Collection,Thomas Scott,2013,Automobilism
+361,The Car Design Handbook,Rachel Reed,2012,Automobilism
+362,Understanding Engines,Paul Walker,2004,Automobilism
+363,Vintage Cars of the 20th Century,Jennifer Lee,1998,Automobilism
+364,The Modern Driver's Guide,Chris Turner,2019,Automobilism
+365,The Grand Prix Chronicles,Anna Morgan,2007,Automobilism
+366,Autocross Adventures,Jason Stewart,2016,Automobilism
+367,Street Racing Unveiled,Betty Mitchell,2003,Automobilism
+368,Electric Cars: The New Frontier,Patrick Anderson,2022,Automobilism
+369,European Car Legends,Nancy Thomas,2010,Automobilism
+370,The Science of Speed,Kevin Carter,2015,Automobilism
+371,The Future of Automobiles,Sarah Hughes,2021,Automobilism
+372,Road to Victory,John Moore,2018,Automobilism
+373,Off-Road Machines,Karen Bell,2002,Automobilism
+374,Car Mechanics Simplified,Joseph Collins,2009,Automobilism
+375,American Car Classics,Deborah Murphy,2014,Automobilism
+376,The Art of Car Customization,Laura Ward,2001,Automobilism
+377,Legends of Drag Racing,Richard Bailey,2005,Automobilism
+378,Automobile Design Trends,Barbara Brooks,2019,Automobilism
+379,World of Motorsports,Brian Reed,2000,Automobilism
+380,Classic Cars of Europe,Donna Simmons,2003,Automobilism
+381,The Complete Car Guide,George Bennett,2016,Automobilism
+382,Understanding Car Electronics,Rebecca King,2012,Automobilism
+383,Journey of the Automobile,Edward Jenkins,1998,Automobilism
+384,Street Rods and Hot Rods,Judith Rivera,2006,Automobilism
+385,Motorcycle vs. Car Racing,Gregory Gomez,2020,Automobilism
+386,Legends of NASCAR,Christina Hughes,2007,Automobilism
+387,Fast and Furious: Car Tuning,Jordan Rivera,2014,Automobilism
+388,The Complete Motorsport Encyclopedia,Nancy Howard,2008,Automobilism
+389,American Road Legends,Joshua Patterson,1999,Automobilism
+390,Global Car Culture,Emma Simmons,2002,Automobilism
+391,Endurance Racing Stories,Amy Ross,2013,Automobilism
+392,The Life of a Racecar Driver,Ethan Lopez,2004,Automobilism
+393,The Golden Era of Cars,Benjamin Powell,2017,Automobilism
+394,The Future of Computing,Alex Johnson,2019,IT
+395,Data Structures and Algorithms,Jane Doe,2015,IT
+396,Cybersecurity Essentials,Michael Smith,2021,IT
+397,Understanding Machine Learning,Emily Clarke,2018,IT
+398,The Rise of AI,David Wilson,2020,IT
+399,Networking for Beginners,Susan Green,2014,IT
+400,Introduction to Databases,Mark Davis,2011,IT
+401,Cloud Computing Explained,Laura White,2016,IT
+402,Programming with Python,James Evans,2022,IT
+403,Mastering JavaScript,Patricia Baker,2019,IT
+404,The Art of Software Design,Robert Brown,2017,IT
+405,Coding with Java,William Harris,2015,IT
+406,Data Science for All,Christine Cooper,2018,IT
+407,Deep Learning in Practice,Charles Young,2021,IT
+408,Web Development Basics,Jennifer Lee,2014,IT
+409,The Blockchain Revolution,Chris Turner,2020,IT
+410,Understanding Operating Systems,Anna Morgan,2016,IT
+411,Mobile App Development,Jason Stewart,2019,IT
+412,IoT Fundamentals,Betty Mitchell,2021,IT
+413,Big Data: The New Oil,Patrick Anderson,2017,IT
+414,Cybersecurity for Everyone,Kevin Carter,2020,IT
+415,Practical Data Analytics,Sarah Hughes,2015,IT
+416,Digital Transformation,John Moore,2019,IT
+417,The Complete Guide to SQL,Karen Bell,2016,IT
+418,Virtual Reality & Beyond,Joseph Collins,2018,IT
+419,Artificial Intelligence Unleashed,Deborah Murphy,2022,IT
+420,The Essentials of Coding,Laura Ward,2013,IT
+421,User Experience Design,Richard Bailey,2020,IT
+422,Building Scalable Web Apps,Barbara Brooks,2015,IT
+423,Intro to Computer Science,Brian Reed,2012,IT
+424,Data Visualization Techniques,Donna Simmons,2016,IT
+425,Computer Networks,George Bennett,2018,IT
+426,Machine Learning Basics,Rebecca King,2021,IT
+427,Programming for Data Science,Edward Jenkins,2019,IT
+428,Java for Beginners,Judith Rivera,2014,IT
+429,Guide to Software Engineering,Gregory Gomez,2013,IT
+430,Intro to Linux,Christina Hughes,2017,IT
+431,Mastering React,Jordan Rivera,2022,IT
+432,Tech Startups and Innovation,Nancy Howard,2018,IT
+433,Digital Marketing Essentials,Joshua Patterson,2015,IT
+434,APIs and Web Services,Emma Simmons,2020,IT
+435,Building Secure Applications,Amy Ross,2019,IT
+436,Data Warehousing Simplified,Ethan Lopez,2021,IT
+437,IT Project Management,Benjamin Powell,2016,IT
+438,Modern Web Development,Alexandra Stone,2013,IT
+439,Intro to Blockchain,Daniel Grant,2019,IT
+440,Advanced Java Programming,Rebecca Hunter,2021,IT
+441,Artificial Intelligence for Beginners,John Garcia,2017,IT
+442,Cloud Security Basics,Jessica Ward,2015,IT
+443,Principles of Software Testing,Samuel Murphy,2020,IT
+444,Full-Stack Development Guide,Henry Bell,2022,IT
+445,Cyber Threats and Defense,Alice Roberts,2018,IT
+446,Foundations of Human Anatomy,Sarah Taylor,2005,Medicine
+447,Clinical Pharmacology Basics,Michael Brown,2018,Medicine
+448,Understanding Medical Terminology,Laura Johnson,2021,Medicine
+449,Modern Surgery Techniques,James Lee,2015,Medicine
+450,Pathology Simplified,Emily Carter,2013,Medicine
+451,Principles of Neuroscience,Christopher White,2020,Medicine
+452,Essentials of Cardiology,Patricia Clark,2008,Medicine
+453,Pharmacology in Practice,Kevin Turner,2019,Medicine
+454,Epidemiology for Beginners,Rebecca Adams,2014,Medicine
+455,Advanced Pediatrics,Charles Young,2016,Medicine
+456,Internal Medicine Guide,Rachel Moore,2017,Medicine
+457,Microbiology and Immunology,Thomas Green,2009,Medicine
+458,Nutrition and Health,Jennifer King,2021,Medicine
+459,Medical Genetics Explained,Robert Brown,2006,Medicine
+460,Infectious Diseases Overview,Jessica Lopez,2015,Medicine
+461,Introduction to Radiology,David Wilson,2020,Medicine
+462,Medical Ethics in Practice,Angela Hughes,2018,Medicine
+463,Geriatric Medicine Essentials,Steven Baker,2011,Medicine
+464,Obstetrics and Gynecology,Melissa Wright,2007,Medicine
+465,Dermatology Fundamentals,John Anderson,2013,Medicine
+466,Pulmonology for Practitioners,Susan Edwards,2019,Medicine
+467,Foundations of Psychiatry,Paul Morris,2014,Medicine
+468,Rehabilitation Medicine,Barbara Gray,2022,Medicine
+469,Oncology Basics,Deborah Scott,2010,Medicine
+470,Emergency Medicine Protocols,George Phillips,2018,Medicine
+471,Orthopedics Explained,Betty Harris,2012,Medicine
+472,Endocrinology for Beginners,Mark Russell,2019,Medicine
+473,Principles of Toxicology,Christine Stewart,2021,Medicine
+474,Clinical Biochemistry,Jason Rogers,2016,Medicine
+475,Medical Research Methods,Carolyn Long,2020,Medicine
+476,Palliative Care Essentials,Andrew Jenkins,2017,Medicine
+477,Anesthesiology Handbook,Matthew Coleman,2013,Medicine
+478,Genetic Counseling Practices,Karen Barnes,2021,Medicine
+479,Health and Disease Prevention,Emily Bell,2014,Medicine
+480,Gastroenterology Simplified,Patricia Foster,2015,Medicine
+481,Foundations of Pharmacotherapy,Joshua Price,2019,Medicine
+482,Sports Medicine Basics,David Reed,2012,Medicine
+483,Nursing Care Guidelines,Ruth Garcia,2020,Medicine
+484,Introduction to Hematology,Alexander Adams,2016,Medicine
+485,Infectious Disease Control,Sandra Scott,2018,Medicine
+486,Medical Imaging Techniques,Alice Rivera,2021,Medicine
+487,Women's Health Essentials,Brian Cox,2014,Medicine
+488,Diagnostic Radiology,Michelle Roberts,2017,Medicine
+489,Occupational Health Handbook,Lisa Butler,2019,Medicine
+490,Principles of Public Health,Tom Sanchez,2015,Medicine
+491,Emergency Care Fundamentals,Nancy Morris,2013,Medicine
+492,Respiratory Medicine Guide,Kevin Hughes,2016,Medicine
+493,Immunotherapy Advances,Susan Hernandez,2022,Medicine
+494,Essentials of Pain Management,Ronald Brooks,2011,Medicine
+495,Health Policy and Management,Diana Scott,2020,Medicine
+496,Genomics and Precision Medicine,Jonathan Roberts,2019,Medicine
+497,Preventive Medicine Handbook,Anna Hayes,2018,Medicine
+498,Foundations of Rheumatology,Edward Lewis,2017,Medicine
+499,Clinical Psychology Insights,Julia Ward,2016,Medicine
+500,Occupational Therapy Guide,Stephanie Peters,2021,Medicine
+501,Introduction to Urology,Benjamin Foster,2012,Medicine
+502,Medical Technology Innovations,Christopher Watson,2019,Medicine
+503,Essentials of Physiotherapy,Amanda Long,2013,Medicine
+504,Introduction to Nephrology,William Clark,2018,Medicine
+505,Health Informatics Overview,Rebecca Foster,2020,Medicine
+506,Primary Care Practice,John Graham,2017,Medicine
+507,Clinical Nutrition,Michelle Martinez,2019,Medicine
