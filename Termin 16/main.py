@@ -1,5 +1,5 @@
 import pandas as pd
 
-df = pd.read_csv('books.csv')
+df = pd.read_csv('books.csv', index_col='id')
 
-print(df.loc[3, 'title'])
+print(df.loc[103, 'title'])
