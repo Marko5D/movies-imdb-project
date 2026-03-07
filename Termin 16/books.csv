@@ -1,15 +1,12 @@
-title,author,published,genre
-To Kill a Mockingbird,Harper Lee,1960,Fiction
-1984,George Orwell,1949,Dystopian
-Moby-Dick,Herman Mellvile,1851,Adventure
-War and Peace,Leo Tolstoy,1869,Historical Fiction
-The Catcher in the Rye,J. D. Salinger,1951,Fiction
-Pride and Prejudice,Jane Austen,1813,Romance
-The Great Gatsby,F. Scott Fitzgerald,1925,Fiction
-Brave New World,Aldous Huxley,1932,Dystopian
-The Hobbit,J. R. R. Tolkien,1937,Fantasy
-Crime and Punishment,Fyodor Dostoevsky,1866,Psychological Fiction
-На Дрини Ћуприја,Иво Андрић,1945,Fiction
-The Alchemist,Paulo Coelho,1988,Adventure
-"Thinking, Fast and Slow",Daniel Kahneman,2011,Psychology
-Title1,Author1,1999,Genre1
+id,title,author,published,genre
+101,To Kill a Mockingbird,Harper Lee,1960,Fiction
+102,1984,George Orwell,1949,Dystopian
+103,Moby-Dick,Herman Mellvile,1851,Adventure
+104,War and Peace,Leo Tolstoy,1869,Historical Fiction
+105,The Catcher in the Rye,J. D. Salinger,1951,Fiction
+106,Pride and Prejudice,Jane Austen,1813,Romance
+107,The Great Gatsby,F. Scott Fitzgerald,1925,Fiction
+108,Brave New World,Aldous Huxley,1932,Dystopian
+109,The Hobbit,J. R. R. Tolkien,1937,Fantasy
+110,Crime and Punishment,Fyodor Dostoevsky,1866,Psychological Fiction
+111,На Дрини Ћуприја,Иво Андрић,1945,Fiction
