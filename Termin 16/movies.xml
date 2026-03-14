@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding="UTF-8" standalone="yes"?>
+<!-- Movie catalog -->
+ <movieCatalog generateAt="2026-02-22">
+    <movie id="m1">
+        <title>The Matrix</title>
+        <release_year>1999</release_year>
+        <genre>Science Fiction</genre>
+        <descriptionText>Reality check: a hacker discovers the world is not what
+        it seems. Iconic
+            action and philosophy. The "red pill / blue pill" moment.
+        </descriptionText>
+    </movie>
+
+    <movie id="m2">
+        <title>Titanic</title>
+        <release_year>1997</release_year>
+        <genre>Romance / Drama</genre>
+        <descriptionText>A love story set against a real historical disaster. Tip:
+            bring tissues. 
+                Grand scale,memorable soundtrack, unforgetable ending.
+        </descriptionText>
+    </movie>
+
+    <movie id="m3">
+        <title>The Lord of the Rings: The Fellowship of the Ring</title>
+        <release_year>2001</release_year>
+        <genre>Fantasy / Adventure</genre>
+        <descriptionText>Epic journey begins with a small hero and a huge
+        burden. Quote: Even the
+                smallest person can change the course of the future. Trailer link:
+                http://example.org/trailers/lotr1
+        </descriptionText>
+    </movie>
+</movieCatalog>
