@@ -13,12 +13,14 @@ df['rental_date'] = pd.to_datetime(df['rental_date'], errors='raise')
 
 
 mask = (pd.Timestamp.today() - df['rental_date']) > pd.Timedelta(days=31)
-new_df = df[mask]
+df_filtered = df[mask]
+
+df_filtered_sorted = df_filtered.sort_values(by='rental_date', ascending=True)
 
 
-new_df2 = new_df.sort_values(by='rental_date', ascending=True)
+df_filtered_sorted['overdue_days'] = (pd.Timestamp.today() - df_filtered_sorted ['rental_date']).dt.days - 31 
 
 
-print(new_df2)
+print(df_filtered_sorted)
 
       
