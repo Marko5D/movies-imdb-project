@@ -27,5 +27,5 @@ df_filtered_sorted['overdue_days'] = (pd.Timestamp.today() - df_filtered_sorted 
 df_filtered_sorted_cleaned = df_filtered_sorted.drop(['address', 'gender', 'city', 'active'], axis=1) 
 
 #load data
-df_filtered_sorted_cleaned.to_excel('overdue_users.xlsx')
+df_filtered_sorted_cleaned.to_excel('overdue_users.xlsx', index=False)
       
