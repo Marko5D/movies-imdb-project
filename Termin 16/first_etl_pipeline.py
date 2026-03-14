@@ -16,9 +16,9 @@ mask = (pd.Timestamp.today() - df['rental_date']) > pd.Timedelta(days=31)
 new_df = df[mask]
 
 
-new_df.sort_values(by='rental_date', ascending=True, inplace=True)
+new_df2 = new_df.sort_values(by='rental_date', ascending=True)
 
 
-print(new_df)
+print(new_df2)
 
       
