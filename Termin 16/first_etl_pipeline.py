@@ -15,6 +15,10 @@ df['rental_date'] = pd.to_datetime(df['rental_date'], errors='raise')
 mask = (pd.Timestamp.today() - df['rental_date']) > pd.Timedelta(days=31)
 new_df = df[mask]
 
+
+new_df.sort_values(by='rental_date')
+
+
 print(new_df)
 
       
