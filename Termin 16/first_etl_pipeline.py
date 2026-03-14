@@ -20,7 +20,9 @@ df_filtered_sorted = df_filtered.sort_values(by='rental_date', ascending=True)
 
 df_filtered_sorted['overdue_days'] = (pd.Timestamp.today() - df_filtered_sorted ['rental_date']).dt.days - 31 
 
+df_filtered_sorted_cleaned = df_filtered_sorted.drop(['address', 'gender', 'city', 'active'], axis=1) 
 
-print(df_filtered_sorted)
+
+print(df_filtered_sorted_cleaned)
 
       
