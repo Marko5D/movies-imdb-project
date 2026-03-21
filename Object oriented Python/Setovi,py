@@ -1,3 +1,34 @@
+# dodavanje elemenata u setove
+
 products_in_stock = {"Laptop", "Phone", "TV"}
 products_in_stock.add("Headphones")
 print(products_in_stock)  # {"Laptop", "Phone", "TV", "Headphones"}
+
+# uklanjanje elemenata iz setova
+
+products_in_stock = {"Laptop", "Phone", "TV", "Headphones"}
+products_in_stock.remove("TV")
+print(products_in_stock)  # {"Laptop", "Phone", "Headphones"}
+
+# metoda discard
+
+products_in_stock = {"Laptop", "Phone", "TV", "Headphones"}
+products_in_stock.discard("Printer") # Does not raise an error even if "Printer" is not in the set
+print(products_in_stock) # {"Laptop", "Phone", "TV", "Headphones"}
+
+# unija setova
+
+products_on_sale = {"Phone", "Tablet", "Laptop"}
+all_products = products_in_stock.union(products_on_sale)
+print(all_products)  # {"Laptop", "Phone", "Headphones", "Tablet"}
+
+# presek setova
+
+# Intersection operation to find common elements
+common_products = products_in_stock.intersection(products_on_sale)
+print(common_products)  # Output: {"Phone", "Laptop"}
+
+# razlika setova
+
+products_only_in_stock = products_in_stock.difference(products_on_sale)
+print(products_only_in_stock)  # {"Headphones"}
