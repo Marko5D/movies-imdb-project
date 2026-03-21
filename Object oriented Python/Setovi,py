@@ -1,0 +1,3 @@
+products_in_stock = {"Laptop", "Phone", "TV"}
+products_in_stock.add("Headphones")
+print(products_in_stock)  # {"Laptop", "Phone", "TV", "Headphones"}
