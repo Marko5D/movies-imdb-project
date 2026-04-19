@@ -51,6 +51,23 @@ def enrich_movies(movies):
 
     return movies
 
+# Sortiranje filmova po IMDb oceni i uzimanje top 10
+def get_top_10(movies):
+    valid_movies = []
+
+    for movie in movies:
+        if movie["imdb_rating"] != "N/A":
+           movie["imdb_rating"] = float(movie["imdb_rating"])
+           valid_movies.append(movie)
+
+    sorted_movies = sorted(
+        valid_movies,
+        key=lambda x: x["imdb_rating"],
+        reverse=True
+    )
+
+    return sorted_movies[:10]
+
 # Glavni deo programa
 movies = load_movies("movies.csv")
 
@@ -58,6 +75,10 @@ print("Broj ucitanih filmova:", len(movies))
 
 movies = enrich_movies(movies)
 
-# Ispis podataka koje vraca API
 print("\nPRVI FILM NAKON OBRADE:")
 print(movies[0])
+
+top_10 = get_top_10(movies)
+print("\nTOP 10 FILMOVA PO IMDb OCENI:\n")
+for movie in top_10:
+    print(f"{movie['title']} - {movie['imdb_rating']}")
