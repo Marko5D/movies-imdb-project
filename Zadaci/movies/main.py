@@ -5,16 +5,20 @@ df = pd.read_csv("DMSP4-Task_02-movies.csv")
 df["budget"] = pd.to_numeric(df["budget"], errors="coerce")
 df["box_office"] = pd.to_numeric(df["box_office"], errors="coerce")
 
-usa_df = df[df["country"].str.contains("USA", na=False)].copy()
+countries = ["USA", "Russia", "UK", "South Korea"]
 
-usa_df["balance"] = usa_df["box_office"] - usa_df["budget"]
+for country in countries:
 
-usa_df = usa_df.sort_values(by="balance", ascending=False)
+    temp_df = df[df["country"].str.contains(country, na=False)].copy()
 
-top10_usa = usa_df.head(10)
+    temp_df["balance"] = temp_df["box_office"] - temp_df["budget"]
 
-top10_usa = top10_usa[["title", "release_year", "genre", "director", "balance"]]
+    temp_df = temp_df.sort_values(by="balance", ascending=False)
 
-top10_usa.to_excel("top10_USA.xlsx", index=False)
+    top10 = temp_df.head(10)
 
-print(usa_df.head())
+    top10 = top10[["title", "release_year", "genre", "director", "balance"]]
+
+    top10.to_excel(f"top10_{country}.xlsx", index=False)
+
+    print("Zavrseno za {country}")
