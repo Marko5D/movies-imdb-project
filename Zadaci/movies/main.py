@@ -41,3 +41,43 @@ def process_country(df, country):
     country_df["balance"] = country_df["box_office"] - country_df["budget"]
 
     # Sortiranje po koloni balance od najvece ka najmanjoj vrednosti
+    country_df = country_df.sort_values(by="balance", ascending=False)
+
+    # Uzimanje prvih 10 redova
+    top_10 = country_df.head(10)
+
+    # Zadrzavanje samo kolona koje su trazene u zadatku
+    top_10 = top_10[["title," "release_year", "genre", "director", "balance"]]
+
+    return top_10
+
+def save_to_excel(df, country, output_folder):
+    """
+    Cuva DataFrame u Excel fajl unutar output foldera.
+    """
+    file_path = os.path.join(output_folder, f"top10_{country}.xlsx")
+    df.to_excel(file_path, index=False)
+
+def main():
+    """
+    Glavna funkcija programa.
+    """
+
+    # Kreiranje output foldera ako ne postoji
+    os.makedirs(OUTPUT_FOLDER, exist_ok=True)
+
+    # Ucitavanje podataka
+    df = load_data(INPUT_FILE)
+
+    # Priprema numerickih kodova
+    df = prepare_numeric_columns(df)
+
+    # Obrada podataka za svaku drzavu i cuvanje u Excel fajl
+    for country in COUNTRIES:
+        result_df = process_country(df, country)
+        save_to_excel(result_df, country, OUTPUT_FOLDER)
+        print(f"Zavrsen excel fajl za drzavu: {country}")
+
+    # Pokretanje programa
+    if __name__ == "main":
+        main()
