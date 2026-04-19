@@ -2,10 +2,11 @@
 import csv
 import requests
 import time
+import xml.etree.ElementTree as ET
 from config import API_KEY
 
 
-# Ucitavanje CSV fajla
+# Ucitavanje filmova iz CSV fajla
 def load_movies(file_path):
     movies = []
 
@@ -17,7 +18,7 @@ def load_movies(file_path):
 
     return movies
 
-# Funkcija za dobijanje podataka sa OMDb API-ja
+# Dobijanje dodatnih podataka sa OMDb API-ja
 def get_movie_data(title, year):
     url= f"http://www.omdbapi.com/?t={title}&y={year}&apikey={API_KEY}"
 
@@ -67,6 +68,19 @@ def get_top_10(movies):
     )
 
     return sorted_movies[:10]
+# Cuvanje podataka u XML fajl
+def save_to_xml(movies, filename="movies.xml"):
+    root = ET.Element("movies")
+
+    for movie in movies:
+        movie_el = ET.SubElement(root, "movie")
+
+    for key, value in movie.items():
+        el = ET.SubElement(movie_el, key)
+        el.text = str(value)
+
+    tree = ET.ElementTree(root)
+    tree.write(filename, encoding="utf-8", xml_declaration=True)
 
 # Glavni deo programa
 movies = load_movies("movies.csv")
@@ -78,7 +92,14 @@ movies = enrich_movies(movies)
 print("\nPRVI FILM NAKON OBRADE:")
 print(movies[0])
 
+# Top 10 filmova
 top_10 = get_top_10(movies)
+
 print("\nTOP 10 FILMOVA PO IMDb OCENI:\n")
 for movie in top_10:
     print(f"{movie['title']} - {movie['imdb_rating']}")
+
+# Cuvanje u XML fajl
+save_to_xml(movies)
+
+print("\nPodaci su sacuvani u movies.xml fajl.")
