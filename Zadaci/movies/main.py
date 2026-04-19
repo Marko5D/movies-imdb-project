@@ -1,24 +1,43 @@
+import os
 import pandas as pd
 
-df = pd.read_csv("DMSP4-Task_02-movies.csv")
+# Putanja do ulaznog CSV fajla
+INPUT_FILE = "DMSP4-Task_02-movies.csv"
 
-df["budget"] = pd.to_numeric(df["budget"], errors="coerce")
-df["box_office"] = pd.to_numeric(df["box_office"], errors="coerce")
+# Folder u koji ce biti sacuvani izlazni Excel fajlovi
+OUTPUT_FOLDER = "output"
 
-countries = ["USA", "Russia", "UK", "South Korea"]
+# Drzave koje se traze u zadatku
+COUNTRIES = ["USA", "Russia", "UK", "South Korea"]
 
-for country in countries:
+def load_data(file_path):
+    """
+    Ucitava CSV Fajl u DataFrame.
+    """
+    return pd.read_csv(file_path)
 
-    temp_df = df[df["country"].str.contains(country, na=False)].copy()
+def prepare_numeric_columns(df):
+    """
+    Pretvara kolone budget i box_office u numericki tip podataka
+    Ako postoje neispravne vrednosti, bice pretvorene u NaN.
+    """
+    df["budget"] = pd.to_numeric(df["budget"], errors="coerce")
+    df["box_office"] = pd.to_numeric(df["box_office"], errors="coerce")
+    return df
 
-    temp_df["balance"] = temp_df["box_office"] - temp_df["budget"]
+def process_country(df, country):
+    """
+    Za prosledjenu drzavu:
+    1. Filtrira filmove,
+    2. Kreira kolonu balance,
+    3. Sortira po balance opadajuce,
+    4. Uzima top 10 filmova,
+    5. Ostavlja samo potrebne kolone.
+    """
+    # Filtriranje filmova za odredjenu drzavu
+    country_df = df[df["country"].str.contains(country, na=False)].copy()
 
-    temp_df = temp_df.sort_values(by="balance", ascending=False)
+    # Kreiranje nove kolone balance
+    country_df["balance"] = country_df["box_office"] - country_df["budget"]
 
-    top10 = temp_df.head(10)
-
-    top10 = top10[["title", "release_year", "genre", "director", "balance"]]
-
-    top10.to_excel(f"top10_{country}.xlsx", index=False)
-
-    print("Zavrseno za {country}")
+    # Sortiranje po koloni balance od najvece ka najmanjoj vrednosti
