@@ -1,2 +1,2 @@
 # API kljuc za pristup OMDb servisu
-API_KEY = "1f02860a"
+API_KEY = "your_api_key_here"

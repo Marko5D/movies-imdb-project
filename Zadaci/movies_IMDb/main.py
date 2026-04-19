@@ -97,7 +97,7 @@ top_10 = get_top_10(movies)
 
 print("\nTOP 10 FILMOVA PO IMDb OCENI:\n")
 for movie in top_10:
-    print(f"{movie['title']} - {movie['imdb_rating']}")
+    print(f"{movie['title']:<40} | {movie['imdb_rating']}")
 
 # Cuvanje u XML fajl
 save_to_xml(movies)
