@@ -3,8 +3,11 @@ import csv
 import requests
 import time
 import xml.etree.ElementTree as ET
-from config import API_KEY
+import os
+from dotenv import load_dotenv
 
+load_dotenv()
+API_KEY = os.getenv("API_KEY")
 
 # Ucitavanje filmova iz CSV fajla
 def load_movies(file_path):
