@@ -1,6 +1,7 @@
 # Uvoz potrebhih biblioteka
 import csv
 import requests
+import time
 from config import API_KEY
 
 
@@ -36,25 +37,27 @@ def get_movie_data(title, year):
             "actors": "N/A",
             "imdb_votes": "N/A"
         }
-# Ucitavanje filmova iz CSV fajla
+
+# Dodavanje API podataka svim filmovima
+def enrich_movies(movies):
+    for movie in movies:
+        api_data = get_movie_data(
+            movie["title"],
+            movie["release_year"]
+        )
+
+        movie.update(api_data)
+        time.sleep(1)
+
+    return movies
+
+# Glavni deo programa
 movies = load_movies("movies.csv")
 
 print("Broj ucitanih filmova:", len(movies))
-print("Prvi red:")
-print(movies[0])
 
-# Uzimamo prvi film iz liste
-first_movie = movies[0]
-
-# poziv funkcije za dobijanje podataka sa API-ja
-api_data = get_movie_data(
-    first_movie["title"],
-    first_movie["release_year"]
-)
-
-# Dodavanje novih podataka u prvi film
-first_movie.update(api_data)
+movies = enrich_movies(movies)
 
 # Ispis podataka koje vraca API
-print("\nPRVI FILM NAKON DODAVANJA API PODATAKA:")
-print(first_movie)
+print("\nPRVI FILM NAKON OBRADE:")
+print(movies[0])
