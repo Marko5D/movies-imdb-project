@@ -15,7 +15,6 @@ query = "SELECT budget, revenue FROM movie"
 
 # Ucitavanje podataka u pandas
 df = pd.read_sql(query, conn)
-print(df.columns)
 
 # Scatter plot
 plt.scatter(df['budget'], df['revenue'])
