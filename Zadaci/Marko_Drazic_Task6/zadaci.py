@@ -9,12 +9,14 @@ conn = mysql.connector.connect(
 
 cursor = conn.cursor()
 
-cursor.execute("SHOW TABLES;")
-tables = cursor.fetchall()
+cursor.execute("""
+Select g.name AS genre, m.budget
+FROM movie m
+JOIN movie_genre mg ON m.id = mg.movie_id
+JOIN genre g ON mg.genre_id = g.id
+WHERE m.budget IS NOT NULL;
+""")
 
-print("Tabele u bazi:")
-for table in tables:
-    print(table[0])
+result = cursor.fetchall()
 
-cursor.close()
-conn.close()
+print(result)
