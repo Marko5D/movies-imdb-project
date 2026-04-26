@@ -7,4 +7,14 @@ conn = mysql.connector.connect(
     database="movies_db"
 )
 
-print("Konekcija uspesna!")
+cursor = conn.cursor()
+
+cursor.execute("SHOW TABLES;")
+tables = cursor.fetchall()
+
+print("Tabele u bazi:")
+for table in tables:
+    print(table[0])
+
+cursor.close()
+conn.close()
