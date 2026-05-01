@@ -1,9 +1,10 @@
 import pandas as pd
 
 # Ucitavanje podataka
-def load_data(file_path):
+def load_data(online_store_data.csv):
+    
     """ Ucitava CSV fajl i vraca DataFrame. """
-    df = pd.read_csv(file_path)
+    df = pd.read_csv(online_store_data.csv)
     return df
 
 
