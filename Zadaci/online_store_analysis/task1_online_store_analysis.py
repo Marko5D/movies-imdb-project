@@ -14,3 +14,11 @@ najprodavaniji = df.sort_values(by="quantity_sold", ascending=False).iloc[0]
 
 print("\nNajprodavaniji proizvod:")
 print(najprodavaniji)
+
+# 3. Top 5 mobilnih telefona
+smartphones = df[df["category"] == "Smartphones"]
+
+top5_phones = smartphones.sort_values(by="quantity_sold", ascending=False).head(5)
+
+print("\nTop 5 mobilnih telefona:")
+print(top5_phones)
