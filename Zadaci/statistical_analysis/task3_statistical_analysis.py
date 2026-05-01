@@ -43,15 +43,21 @@ def analyze_most_common_brand(df):
 def analyze_top_selling_brand(df):
     """ Pronalazi najprodavaniji brend. """
     
-    top_selling_brand = (
+    sales_by_brand = (
         df.groupby("brand")["quantity_sold"]
         .sum()
         .sort_values(ascending=False)
         .head(1)
     )
 
+    top_brand = sales_by_brand.idxmax()
+    top_quantity = sales_by_brand.max()
+
     print("\n3. Najprodavaniji brend u online trgovini")
-    print(top_selling_brand)
+    print(f"{top_brand} - {top_quantity:.0f} prodatih komada")
+
+    print("\n3. Najprodavaniji brend u online trgovini")
+    print(top_brand)
 
 def analyze_average_rating_by_category(df):
     """ Racuna prosecnu ocenu po kategorijama. """
@@ -63,7 +69,7 @@ def analyze_average_rating_by_category(df):
     )
 
     print("\n4. Prosecna osena proizvoda po kategorijama")
-    print(average_rating_by_category)
+    print(average_rating_by_category.to_string())
 
 def analyze_popularity_by_color(df):
     """ Analiza popularnosti proizvoda po bojama. """
@@ -75,7 +81,7 @@ def analyze_popularity_by_color(df):
     )
 
     print("\n5. Popularnost proizvoda po bojama")
-    print(popularity_by_color)
+    print(popularity_by_color.to_string())
 
 # 3. Efikasnost prodaje
 
