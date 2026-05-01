@@ -1,11 +1,7 @@
 import pandas as pd
 
 # Ucitavanje podataka
-def load_data(online_store_data.csv):
-    
-    """ Ucitava CSV fajl i vraca DataFrame. """
-    df = pd.read_csv(online_store_data.csv)
-    return df
+df = pd.read_csv("online_store_data.csv")
 
 
 # Mere centralne tendencije
