@@ -3,6 +3,18 @@ import pandas as pd
 # Ucitavanje podataka
 df = pd.read_csv("online_store_data.csv")
 
+# Rating (može imati zarez, tekst itd.)
+df["rating"] = df["rating"].astype(str)
+df["rating"] = df["rating"].str.replace(",", ".", regex=False)
+df["rating"] = df["rating"].str.extract(r"(\d+\.?\d*)")
+df["rating"] = pd.to_numeric(df["rating"], errors="coerce")
+
+# Quantity kolone
+df["quantity_sold"] = df["quantity_sold"].astype(str).str.replace(",", ".", regex=False)
+df["quantity_sold"] = pd.to_numeric(df["quantity_sold"], errors="coerce")
+
+df["quantity_in_stock"] = df["quantity_in_stock"].astype(str).str.replace(",", ".", regex=False)
+df["quantity_in_stock"] = pd.to_numeric(df["quantity_in_stock"], errors="coerce")
 
 # Mere centralne tendencije
 
