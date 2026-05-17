@@ -13,7 +13,7 @@ timeframes = {
 }
 
 risk_percent = 0.2
-check_interval = 60  # sekundi
+check_interval = 60
 cooldown_minutes = 15
 last_trade_time = {}
 
@@ -33,6 +33,28 @@ def get_account_risk():
     risk_amount = balance * (risk_percent / 100)
 
     return balance, risk_percent, risk_amount
+
+
+def check_open_position(symbol):
+    positions = mt5.positions_get(symbol=symbol)
+
+    if positions is None or len(positions) == 0:
+        return False
+
+    print("Već postoji otvorena pozicija za ovaj simbol.")
+
+    for position in positions:
+        position_type = "BUY" if position.type == mt5.POSITION_TYPE_BUY else "SELL"
+
+        print("Position type:", position_type)
+        print("Volume:", position.volume)
+        print("Open price:", position.price_open)
+        print("Current SL:", position.sl)
+        print("Current TP:", position.tp)
+        print("Current profit:", round(position.profit, 2))
+
+    print("Preskačem novi ulaz.")
+    return True
 
 
 def get_signal(symbol, timeframe):
@@ -96,10 +118,7 @@ while True:
                 print(f"Cooldown aktivan. Preostalo: {round(remaining, 1)} min. Preskačem.")
                 continue
 
-        positions = mt5.positions_get(symbol=symbol)
-
-        if positions is not None and len(positions) > 0:
-            print("Već postoji otvorena pozicija za ovaj simbol. Preskačem.")
+        if check_open_position(symbol):
             continue
 
         symbol_info = mt5.symbol_info(symbol)
