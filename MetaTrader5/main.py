@@ -30,8 +30,8 @@ print("Account balance:", round(balance, 2))
 print("Risk percent:", risk_percent, "%")
 print("Risk amount:", round(risk_amount, 2))
 
-def get_signal(symbol, timeframe):
 
+def get_signal(symbol, timeframe):
     rates = mt5.copy_rates_from_pos(symbol, timeframe, 0, 100)
 
     if rates is None:
@@ -60,10 +60,8 @@ def get_signal(symbol, timeframe):
 
     if last["close"] > last["EMA20"] > last["EMA50"]:
         signal = "BUY"
-
     elif last["close"] < last["EMA20"] < last["EMA50"]:
         signal = "SELL"
-
     else:
         signal = "NO TRADE"
 
@@ -75,6 +73,7 @@ def get_signal(symbol, timeframe):
 
 
 for symbol in symbols:
+    mt5.symbol_select(symbol, True)
 
     symbol_info = mt5.symbol_info(symbol)
 
@@ -82,20 +81,23 @@ for symbol in symbols:
         print(f"Ne mogu da pročitam info za {symbol}")
         continue
 
-    print("\nSYMBOL INFO")
+    print(f"\n========== {symbol} ==========")
 
+    print("SYMBOL INFO")
     print("Trade contract size:", symbol_info.trade_contract_size)
     print("Volume min:", symbol_info.volume_min)
     print("Volume max:", symbol_info.volume_max)
     print("Volume step:", symbol_info.volume_step)
 
-    print(f"\n========== {symbol} ==========")
-
     m1 = get_signal(symbol, timeframes["M1"])
     m5 = get_signal(symbol, timeframes["M5"])
     m15 = get_signal(symbol, timeframes["M15"])
 
-    print("M1:", m1["signal"])
+    if m1 is None or m5 is None or m15 is None:
+        print("Nema dovoljno podataka za signal.")
+        continue
+
+    print("\nM1:", m1["signal"])
     print("M5:", m5["signal"])
     print("M15:", m15["signal"])
 
@@ -118,14 +120,12 @@ for symbol in symbols:
     print("\nFINAL SIGNAL:", final_signal)
 
     if final_signal != "NO TRADE":
-
         close_price = m1["close"]
         atr = m1["atr"]
 
         if final_signal == "BUY":
             sl = close_price - atr * 1.5
             tp = close_price + atr * 2
-
         else:
             sl = close_price + atr * 1.5
             tp = close_price - atr * 2
@@ -133,5 +133,23 @@ for symbol in symbols:
         print("Entry:", round(close_price, 2))
         print("Stop Loss:", round(sl, 2))
         print("Take Profit:", round(tp, 2))
+
+        sl_distance = abs(close_price - sl)
+
+        print("SL distance:", round(sl_distance, 2))
+        print("Risk amount:", round(risk_amount, 2))
+
+        contract_size = symbol_info.trade_contract_size
+
+        raw_lot = risk_amount / (sl_distance * contract_size)
+
+        volume_step = symbol_info.volume_step
+        min_volume = symbol_info.volume_min
+        max_volume = symbol_info.volume_max
+
+        lot = round(raw_lot / volume_step) * volume_step
+        lot = max(min_volume, min(lot, max_volume))
+
+        print("Suggested lot:", round(lot, 2))
 
 mt5.shutdown()
