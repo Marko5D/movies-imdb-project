@@ -23,7 +23,7 @@ if account_info is None:
     quit()
 
 balance = account_info.balance
-risk_percent = 1
+risk_percent = 0.2
 risk_amount = balance * (risk_percent / 100)
 
 print("Account balance:", round(balance, 2))
@@ -151,5 +151,42 @@ for symbol in symbols:
         lot = max(min_volume, min(lot, max_volume))
 
         print("Suggested lot:", round(lot, 2))
+
+confirm = input("Da li želiš da pošalješ DEMO order? Ukucaj YES: ")
+
+if confirm == "YES":
+
+    tick = mt5.symbol_info_tick(symbol)
+
+    if final_signal == "BUY":
+        order_type = mt5.ORDER_TYPE_BUY
+        price = tick.ask
+
+    else:
+        order_type = mt5.ORDER_TYPE_SELL
+        price = tick.bid
+
+    request = {
+        "action": mt5.TRADE_ACTION_DEAL,
+        "symbol": symbol,
+        "volume": lot,
+        "type": order_type,
+        "price": price,
+        "sl": sl,
+        "tp": tp,
+        "deviation": 20,
+        "magic": 123456,
+        "comment": "AI Trading Bot",
+        "type_time": mt5.ORDER_TIME_GTC,
+        "type_filling": mt5.ORDER_FILLING_IOC,
+    }
+
+    result = mt5.order_send(request)
+
+    print("\nORDER RESULT:")
+    print(result)
+
+else:
+    print("Order nije poslat.")
 
 mt5.shutdown()
