@@ -75,6 +75,13 @@ def get_signal(symbol, timeframe):
 for symbol in symbols:
     mt5.symbol_select(symbol, True)
 
+    positions = mt5.positions_get(symbol=symbol)
+
+    if positions is not None and len(positions) > 0:
+        print(f"\n========== {symbol} ==========")
+        print("Već postoji otvorena pozicija za ovaj simbol. Preskačem.")
+        continue
+
     symbol_info = mt5.symbol_info(symbol)
 
     if symbol_info is None:
@@ -120,21 +127,31 @@ for symbol in symbols:
     print("\nFINAL SIGNAL:", final_signal)
 
     if final_signal != "NO TRADE":
-        close_price = m1["close"]
+        tick = mt5.symbol_info_tick(symbol)
+
+        if tick is None:
+            print("Ne mogu da pročitam trenutnu cenu.")
+            continue
+
         atr = m1["atr"]
 
         if final_signal == "BUY":
-            sl = close_price - atr * 1.5
-            tp = close_price + atr * 2
-        else:
-            sl = close_price + atr * 1.5
-            tp = close_price - atr * 2
+            order_type = mt5.ORDER_TYPE_BUY
+            entry_price = tick.ask
+            sl = entry_price - atr * 1.5
+            tp = entry_price + atr * 2
 
-        print("Entry:", round(close_price, 2))
+        else:
+            order_type = mt5.ORDER_TYPE_SELL
+            entry_price = tick.bid
+            sl = entry_price + atr * 1.5
+            tp = entry_price - atr * 2
+
+        print("Entry:", round(entry_price, 2))
         print("Stop Loss:", round(sl, 2))
         print("Take Profit:", round(tp, 2))
 
-        sl_distance = abs(close_price - sl)
+        sl_distance = abs(entry_price - sl)
 
         print("SL distance:", round(sl_distance, 2))
         print("Risk amount:", round(risk_amount, 2))
@@ -152,41 +169,30 @@ for symbol in symbols:
 
         print("Suggested lot:", round(lot, 2))
 
-confirm = input("Da li želiš da pošalješ DEMO order? Ukucaj YES: ")
+        confirm = input("Da li želiš da pošalješ DEMO order? Ukucaj YES: ")
 
-if confirm == "YES":
+        if confirm == "YES":
+            request = {
+                "action": mt5.TRADE_ACTION_DEAL,
+                "symbol": symbol,
+                "volume": lot,
+                "type": order_type,
+                "price": entry_price,
+                "sl": sl,
+                "tp": tp,
+                "deviation": 20,
+                "magic": 123456,
+                "comment": "AI Trading Bot",
+                "type_time": mt5.ORDER_TIME_GTC,
+                "type_filling": mt5.ORDER_FILLING_IOC,
+            }
 
-    tick = mt5.symbol_info_tick(symbol)
+            result = mt5.order_send(request)
 
-    if final_signal == "BUY":
-        order_type = mt5.ORDER_TYPE_BUY
-        price = tick.ask
+            print("\nORDER RESULT:")
+            print(result)
 
-    else:
-        order_type = mt5.ORDER_TYPE_SELL
-        price = tick.bid
-
-    request = {
-        "action": mt5.TRADE_ACTION_DEAL,
-        "symbol": symbol,
-        "volume": lot,
-        "type": order_type,
-        "price": price,
-        "sl": sl,
-        "tp": tp,
-        "deviation": 20,
-        "magic": 123456,
-        "comment": "AI Trading Bot",
-        "type_time": mt5.ORDER_TIME_GTC,
-        "type_filling": mt5.ORDER_FILLING_IOC,
-    }
-
-    result = mt5.order_send(request)
-
-    print("\nORDER RESULT:")
-    print(result)
-
-else:
-    print("Order nije poslat.")
+        else:
+            print("Order nije poslat.")
 
 mt5.shutdown()
