@@ -14,6 +14,8 @@ timeframes = {
 
 risk_percent = 0.2
 check_interval = 60  # sekundi
+cooldown_minutes = 15
+last_trade_time = {}
 
 if not mt5.initialize():
     print("Greška:", mt5.last_error())
@@ -83,6 +85,16 @@ while True:
         mt5.symbol_select(symbol, True)
 
         print(f"\n========== {symbol} ==========")
+
+        current_time = time.time()
+
+        if symbol in last_trade_time:
+            elapsed_minutes = (current_time - last_trade_time[symbol]) / 60
+
+            if elapsed_minutes < cooldown_minutes:
+                remaining = cooldown_minutes - elapsed_minutes
+                print(f"Cooldown aktivan. Preostalo: {round(remaining, 1)} min. Preskačem.")
+                continue
 
         positions = mt5.positions_get(symbol=symbol)
 
@@ -188,6 +200,11 @@ while True:
 
                 print("\nORDER RESULT:")
                 print(result)
+
+                if result.retcode == mt5.TRADE_RETCODE_DONE:
+                    last_trade_time[symbol] = time.time()
+                    print(f"Cooldown pokrenut za {symbol}: {cooldown_minutes} min.")
+
             else:
                 print("Order nije poslat.")
 
