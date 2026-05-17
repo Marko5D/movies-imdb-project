@@ -39,15 +39,8 @@ def get_signal(symbol, timeframe):
 
     df = pd.DataFrame(rates)
 
-    df["EMA20"] = EMAIndicator(
-        close=df["close"],
-        window=20
-    ).ema_indicator()
-
-    df["EMA50"] = EMAIndicator(
-        close=df["close"],
-        window=50
-    ).ema_indicator()
+    df["EMA20"] = EMAIndicator(close=df["close"], window=20).ema_indicator()
+    df["EMA50"] = EMAIndicator(close=df["close"], window=50).ema_indicator()
 
     df["ATR14"] = AverageTrueRange(
         high=df["high"],
@@ -75,10 +68,11 @@ def get_signal(symbol, timeframe):
 for symbol in symbols:
     mt5.symbol_select(symbol, True)
 
+    print(f"\n========== {symbol} ==========")
+
     positions = mt5.positions_get(symbol=symbol)
 
     if positions is not None and len(positions) > 0:
-        print(f"\n========== {symbol} ==========")
         print("Već postoji otvorena pozicija za ovaj simbol. Preskačem.")
         continue
 
@@ -88,13 +82,19 @@ for symbol in symbols:
         print(f"Ne mogu da pročitam info za {symbol}")
         continue
 
-    print(f"\n========== {symbol} ==========")
+    tick = mt5.symbol_info_tick(symbol)
+
+    if tick is None or tick.bid <= 0 or tick.ask <= 0:
+        print("Market je zatvoren ili nema aktivne bid/ask cene. Preskačem.")
+        continue
 
     print("SYMBOL INFO")
     print("Trade contract size:", symbol_info.trade_contract_size)
     print("Volume min:", symbol_info.volume_min)
     print("Volume max:", symbol_info.volume_max)
     print("Volume step:", symbol_info.volume_step)
+    print("Bid:", tick.bid)
+    print("Ask:", tick.ask)
 
     m1 = get_signal(symbol, timeframes["M1"])
     m5 = get_signal(symbol, timeframes["M5"])
@@ -110,28 +110,15 @@ for symbol in symbols:
 
     final_signal = "NO TRADE"
 
-    if (
-        m1["signal"] == "BUY"
-        and m5["signal"] == "BUY"
-        and m15["signal"] == "BUY"
-    ):
+    if m1["signal"] == "BUY" and m5["signal"] == "BUY" and m15["signal"] == "BUY":
         final_signal = "BUY"
 
-    elif (
-        m1["signal"] == "SELL"
-        and m5["signal"] == "SELL"
-        and m15["signal"] == "SELL"
-    ):
+    elif m1["signal"] == "SELL" and m5["signal"] == "SELL" and m15["signal"] == "SELL":
         final_signal = "SELL"
 
     print("\nFINAL SIGNAL:", final_signal)
 
     if final_signal != "NO TRADE":
-        tick = mt5.symbol_info_tick(symbol)
-
-        if tick is None:
-            print("Ne mogu da pročitam trenutnu cenu.")
-            continue
 
         atr = m1["atr"]
 
